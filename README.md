@@ -101,18 +101,3 @@ Tests can be executed typing the following at your command line
     npm test
 
 A browser will be open and an overview of the tests will be displayed at the console
-
-## Comments
-
-I didn't understand so well what to do in case that a user clicks more than once in the locate button with a different 
-website, then I assumed that It will maintain all the markers in the map, also when the user clicks in the myLocation
-button. After clicking in the reset location, the application clear MyLocation marker.
-
-This was the first time that I used AngularJs (I had been studying AngularJs but I haven't worked with it) for creating
-a not small application, then I don't know if I used the correct and proper code guidelines. I tried to anyway.
-
-It was also my first time writing unit tests for a UI Application, the I made some decisions that I don't know if they were
-correct. I am talking about testing private methods inside a controller. I used a notation with '_' before the method name to
-indicate that it is a private method, however, I exposed them in order to be able to test at my test scripts. Surely there may 
-be a better way to do it. I really wanted to create tests for funcionalities like validateWebsite input or adding markers to 
-the mapMarkers variable inside the scope where I keep track of the actual displayed markers in the map.
