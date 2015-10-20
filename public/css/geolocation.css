@@ -1,0 +1,73 @@
+*{
+	text-align: center;
+	font-size: 20px;
+}
+
+.mainContainer{
+    padding: 0;
+    margin: 0;
+}
+
+#geolocationContainer {
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 15px;
+}
+
+#geolocationContainer>section {
+    float: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.location_value {
+	color: red;
+}
+
+
+#title{
+	font-size: 48px;
+}
+
+#locationSearchButtons {
+	margin-bottom: 10px;
+}
+
+.locationFiltersContainer button, .locationFiltersContainer input{
+	width: 300px;
+	height:50;
+}
+
+table > tbody > tr > td.field_name {
+    text-align: left;
+}
+
+table > tbody > tr > td.location_value {
+    width: 200px;
+}
+
+table .help {
+    visibility: hidden;
+}
+
+button.visible {
+	visibility: visible !important;
+}
+
+menu {
+	text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    display: none;
+}
+
+#map.visible {
+	display: block;
+}
+
+span.error {
+    color: red;
+}

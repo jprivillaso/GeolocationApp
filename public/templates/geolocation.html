@@ -1,0 +1,71 @@
+<div id="geolocationContainer" ng-controller="GeolocationController" class="col-sm-12 col-md-12 col-lg-12">
+	<section class="row row col-xs-10 col-sm-10 col-md-10 col-lg-10 col-centered">
+		<h4>Estimated location</h4>
+		<table align="center">
+			<tbody>
+				<tr>
+					<td class="field_name">IP</td>
+					<td id="location_query" class="location_value">{{locationData.query}}</td>
+					<td><button class="help" helpText="IP" ng-class="tableEmpty" ng-click="displayHelp($event)">?</button></td>
+				</tr>
+				<tr>
+					<td class="field_name">Country</td>
+					<td id="location_country" class="location_value">{{locationData.country}}</td>
+					<td><button class="help" helpText="Country" ng-class="tableEmpty" ng-click="displayHelp($event)">?</button></td>
+				</tr>
+				<tr>
+					<td class="field_name">Region</td>
+					<td id="location_regionName" class="location_value">{{locationData.regionName}}</td>
+					<td><button class="help" helpText="Region" ng-class="tableEmpty" ng-click="displayHelp($event)">?</button></td>
+				</tr>
+				<tr>
+					<td class="field_name">City</td>
+					<td id="location_city" class="location_value">{{locationData.city}}</td>
+					<td><button class="help" helpText="City" ng-class="tableEmpty" ng-click="displayHelp($event)">?</button></td>
+				</tr>
+				<tr>
+					<td class="field_name">Time Zone</td>
+					<td id="location_timezone" class="location_value">{{locationData.timezone}}</td>
+					<td><button class="help" helpText="Time Zone" ng-class="tableEmpty" ng-click="displayHelp($event)">?</button></td>
+				</tr>
+				<tr>
+					<td class="field_name">Latitude</td>
+					<td id="location_lat" class="location_value">{{locationData.lat}}</td>
+					<td><button class="help" helpText="Latitude" ng-class="tableEmpty" ng-click="displayHelp($event)">?</button></td>
+				</tr>
+				<tr>
+					<td class="field_name">Longitude</td>
+					<td id="location_lon" class="location_value">{{locationData.lon}}</td>
+					<td><button class="help" helpText="Longitude" ng-class="tableEmpty" ng-click="displayHelp($event)">?</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<section class="row col-xs-10 col-sm-10 col-md-10 col-lg-10" id="locateButtonsSection">
+		<menu name="filter" class="col-sm-12 col-md-12 col-lg-12">
+			<div class="locationFiltersContainer" id="locationSearchButtons">
+				<button ng-click="getMyLocation()" id="btnMyLocation">My location</button>
+				<button ng-click="resetLocation()" id="btnResetLocation">Reset location</button>
+			</div>
+			<div class="locationFiltersContainer" id="websiteSearchButtons">
+				<form name="myForm" ng-submit="validateForm()">
+					<input type="text" name="website" ng-model="website" id="websiteUrl"/>
+					<button type="submit" id="locateWebsite" ng-click="locateWebsite()">Locate</button>
+				</form>
+			</div>
+			<div role="alert">
+		      <span class="error" class="alert-danger" ng-hide="isWebsiteValid">
+		       Invalid Website!</span>
+		    </div>
+		    <div role="alert">
+		      <span class="error" class="alert-danger" ng-hide="hideWebsiteEmptyError">
+		       Website cannot be empty!</span>
+		    </div>
+		</menu>
+	</section>
+	<section class="row col-xs-10 row col-sm-10 col-md-10 col-lg-10" id="mapVisualizationSection">
+		<div id="mapContainer" class="">
+			<div id="map" ng-class="displayMap"></div>
+		</div>
+	</section>
+</div>
