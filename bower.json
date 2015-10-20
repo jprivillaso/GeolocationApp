@@ -1,0 +1,14 @@
+{
+  "name": "ui-challenge",
+  "description": "Gelolocation Test",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jquery"        : "~1.10.2",
+    "angular"       : "~1.4.0",
+    "bootstrap"     : "~3.3.5",
+    "angular-route" : "~1.4.0",
+    "angular-mocks" : "~1.4.0",
+    "lodash"        : "~3.10.1"
+  }
+}
